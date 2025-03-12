@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-900: hsl(0, 0%, 0%);
+
+    --ff: 'Inter', sans-serif;
+
+    --fs-small: 0.875rem;
+    --fs-regular: 1rem;
+    --fs-large: 1.125rem;
+    --fs-extra-large: clamp(1.5rem, 3vw, 2.5rem);
+    
+    --f-regular: 400 var(--fs-regular) var(--ff);
+    --f-h1: 800 var(--fs-extra-large) var(--ff);
+}
+
+body {
+    font: var(--f-regular);
+    color: var(--clr-neutral-100);
+    background: var(--clr-neutral-900);
+}
+
+.fs-extra-large {
+    font-size: var(--fs-extra-large);
+}

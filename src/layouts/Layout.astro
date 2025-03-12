@@ -1,7 +1,9 @@
 ---
 import '../styles/sanitize.css';
 import '../styles/normalize.css'
+import '../styles/main.css';
 import '../styles/layout.css';
+import '../styles/link.css';
 import Link from '../components/Link.astro';
 ---
 
@@ -15,13 +17,13 @@ import Link from '../components/Link.astro';
 	</head>
     <body class="content">
         <header data-content-width="feature">
-            <h1><Link href="/d479">Header</Link></h1>
+            <h1><Link href="/d479" class="fs-extra-large">Header</Link></h1>
             <nav>
                 <ul>
-                    <li><Link href="/d479">Home</Link></li>
-                    <li><Link href="/d479/link1">Link1</Link></li>
-                    <li><Link href="/d479/link2">Link2</Link></li>
-                    <li><Link href="/d479/link3">Link3</Link></li>
+                    <li><Link href="/d479" data-link-style="underline">Home</Link></li>
+                    <li><Link href="/d479/link1" data-link-style="underline">Link1</Link></li>
+                    <li><Link href="/d479/link2" data-link-style="underline">Link2</Link></li>
+                    <li><Link href="/d479/link3" data-link-style="underline">Link3</Link></li>
                 </ul>
             </nav>
         </header>

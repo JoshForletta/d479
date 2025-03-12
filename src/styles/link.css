@@ -1,0 +1,33 @@
+a {
+    --_color: var(--clr-neutral-100);
+    --_thickness: 2px;
+    --_transition: 0.25s;
+
+    position: relative;
+    font-weight: bold;
+    color: var(--_color);
+    text-decoration: none;
+}
+
+a:where([data-link-style="underline"])::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: var(--_thickness);
+    bottom: 0;
+    border-radius: 100vh;
+    background-color: var(--_color);
+    translate: 0 var(--_thickness);
+    transform: scaleX(0);
+    transition: transform var(--_transition) ease;
+}
+
+a:where([data-link-style="underline"]):where(:hover, :focus-visible) {
+    outline: transparent;
+}
+
+a:where([data-link-style="underline"]):where(:hover, :focus-visible, [aria-current="page"])::before {
+    transform: scaleX(1);
+}
+
