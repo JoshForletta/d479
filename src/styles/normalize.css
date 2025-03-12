@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/*! Adapted from normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -35,12 +35,24 @@ main {
 }
 
 /**
- * Correct the font size and margin on `h1` elements within `section` and
+ * Remove font sizing for headers.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+}
+
+/**
+ * Correct the margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
 h1 {
-    font-size: 2em;
     margin: 0.67em 0;
 }
 
