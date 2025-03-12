@@ -2,6 +2,7 @@
 import '../styles/sanitize.css';
 import '../styles/normalize.css'
 import '../styles/layout.css';
+import Link from '../components/Link.astro';
 ---
 
 <!doctype html>
@@ -12,7 +13,31 @@ import '../styles/layout.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body class="content">
+    <body class="content">
+        <header data-content-width="feature">
+            <h1><Link href="/d479">Header</Link></h1>
+            <nav>
+                <ul>
+                    <li><Link href="/d479">Home</Link></li>
+                    <li><Link href="/d479/link1">Link1</Link></li>
+                    <li><Link href="/d479/link2">Link2</Link></li>
+                    <li><Link href="/d479/link3">Link3</Link></li>
+                </ul>
+            </nav>
+        </header>
 		<slot />
 	</body>
 </html>
+
+<style>
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+</style>
