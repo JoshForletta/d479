@@ -1,8 +1,11 @@
 ---
-import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+
 import Layout from '../layouts/Layout.astro';
+
+import backGroundImage from '../assets/beach landscape 1.jpg';
 ---
 
 <Layout>
-    <Link href="https://astro.build">Hello World!</Link>
+    <Image src={backGroundImage} alt="beach landscape" class="backdrop"></Image>
 </Layout>
