@@ -13,21 +13,30 @@ import Link from '../components/Link.astro';
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Taniti - Home</title>
+        <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
 	</head>
     <body class="content">
-        <header data-content-width="feature">
-            <h1><Link href="/d479" class="fs-extra-large">Header</Link></h1>
+        <header id="header" data-content-width="feature">
+            <h1><Link href="/d479" class="fs-extra-large">Taniti</Link></h1>
             <nav>
                 <ul>
                     <li><Link href="/d479" data-link-style="underline">Home</Link></li>
-                    <li><Link href="/d479/link1" data-link-style="underline">Link1</Link></li>
-                    <li><Link href="/d479/link2" data-link-style="underline">Link2</Link></li>
-                    <li><Link href="/d479/link3" data-link-style="underline">Link3</Link></li>
+                    <li><Link href="/d479/link1" data-link-style="underline">Lodging</Link></li>
+                    <li><Link href="/d479/link2" data-link-style="underline">Dining</Link></li>
+                    <li><Link href="/d479/link3" data-link-style="underline">Activities</Link></li>
+                    <li><Link href="/d479/link3" data-link-style="underline">Transportation</Link></li>
                 </ul>
             </nav>
         </header>
-		<slot />
+        <slot />
+        <footer data-content-width="feature">
+            <small>© 2025 Island of Taniti. All rights reserved.</small>
+            <ul>
+                <li>FAQs</li>
+                <li>Contact us</li>
+            </ul>
+        </footer>
 	</body>
 </html>
 
@@ -37,6 +46,8 @@ import Link from '../components/Link.astro';
         top: 0;
         grid-row: 1;
         align-self: start;
+        padding-block: 0.5rem;
+        text-transform: uppercase;
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -51,11 +62,43 @@ import Link from '../components/Link.astro';
         width: 100vw;
         height: 100%;
         overflow: hidden;
-        backdrop-filter: blur(10px);
+        background: var(--clr-neutral-900);
+    }
+
+    @keyframes header-scroll {
+        to {
+            background: var(--clr-neutral-900);
+        }
     }
 
     nav ul {
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
+    }
+
+    footer {
+        position: relative;
+        padding: 1rem;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        width: 100vw;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        background: var(--clr-neutral-900);
+    }
+
+    footer ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
     }
 </style>

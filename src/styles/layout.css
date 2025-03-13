@@ -29,8 +29,8 @@
 }
 
 .backdrop {
-    grid-column: full;
-    grid-row: 1;
+    position: fixed;
+    top: 0;
     z-index: -1;
     width: 100%;
     height: auto;
