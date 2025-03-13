@@ -1,5 +1,5 @@
 # WGU D479
-This is a project for school, please see the site [here](https://github.com/JoshForletta/d479).
+This is a project for school, please see the site [here](https://joshforletta.github.io/d479).
 
 ## TODO
 [x] Find 5 objective usability tasks.
