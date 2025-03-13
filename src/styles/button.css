@@ -1,0 +1,17 @@
+*[role="button"] {
+    width: fit-content;
+    padding: 0.75rem 1rem;
+    border-radius: 100vh;
+    color: inherit;
+}
+
+*[role="button"]:where([data-button-outline]) {
+    border: 3px solid;
+    background: transparent;
+    transition: all 0.2s;
+}
+
+*[role="button"]:where([data-button-outline]):where(:hover, :focus-visible) {
+    /*opacity: 85%;*/
+    backdrop-filter: brightness(115%) blur(5px);
+}

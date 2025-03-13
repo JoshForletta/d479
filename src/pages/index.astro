@@ -1,14 +1,15 @@
 ---
+import '../styles/button.css';
+
 import { Image } from 'astro:assets';
 
 import Layout from '../layouts/Layout.astro';
+import Link from '../components/Link.astro';
 
 import backGroundImage from '../assets/beach landscape 1.jpg';
 import lodgingImage from '../assets/beach lodging 1.jpeg';
 import restaurantImage from '../assets/oceanside restaurant 1.jpg';
 import snorkelingImage from '../assets/snorkeling 1.jpg';
-
-import Link from '../components/Link.astro';
 ---
 
 <Layout>
@@ -17,7 +18,7 @@ import Link from '../components/Link.astro';
         <section class="hero">
             <h2 class="fs-massive">Welcome to Taniti</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolores, eveniet tempora quibusdam doloremque inventore labore odio quod nesciunt amet officia dolor libero distinctio explicabo itaque quas! Totam, alias? Dicta?</p>
-            <button data-style="accent">Explore</button>
+            <Link href="d479/activities" role="button" data-style="accent" data-button-outline>Explore Activities</Link>
         </section>
         <div class="about-section light" data-content-width="full">
             <h3 class="fs-large">About the island</h3>
@@ -52,10 +53,6 @@ import Link from '../components/Link.astro';
         padding-block: 2rem;
     }
 
-    button {
-        width: fit-content;
-    }
-
     .hero {
         margin-block: 15vh;
         width: 100%;
@@ -66,6 +63,10 @@ import Link from '../components/Link.astro';
 
     .hero p {
         text-align: center;
+    }
+
+    .hero a {
+        margin-top: 1rem;
     }
 
     .about-section {
