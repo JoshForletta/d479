@@ -1,0 +1,137 @@
+---
+import "../styles/button.css";
+
+import { Image } from "astro:assets";
+
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
+
+import backGroundImage from "../assets/beach landscape 1.jpg";
+import lodgingImage from "../assets/beach lodging 1.jpeg";
+import restaurantImage from "../assets/oceanside restaurant 1.jpg";
+import snorkelingImage from "../assets/snorkeling 1.jpg";
+---
+
+<Layout>
+    <Image
+        src={backGroundImage}
+        alt="beach landscape"
+        class="backdrop"
+        data-source="https://unsplash.com/photos/waves-crashing-on-seashore-during-daytime-8iCdRKKoG7g"
+    />
+    <main class="content" data-content-width="full">
+        <section class="hero">
+            <h2 class="fs-massive">Taniti Lodging</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                dolores, eveniet tempora quibusdam doloremque inventore labore
+                odio quod nesciunt amet officia dolor libero distinctio
+                explicabo itaque quas! Totam, alias? Dicta?
+            </p>
+        </section>
+        <div class="about-section light" data-content-width="full">
+            <h3 class="fs-large">Lodging options</h3>
+            <section>
+                <Image
+                    src={lodgingImage}
+                    alt="beachside infinity pool"
+                    data-source="https://unsplash.com/photos/brown-wooden-lounge-chairs-on-brown-wooden-dock-during-daytime-xEaAoizNFV8"
+                />
+                <h4>Hotel</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minima vitae voluptas, labore praesentium facere sit non
+                    assumenda sequi mollitia eveniet distinctio hic deleniti
+                    saepe, provident cumque cum laborum iure nobis?
+                </p>
+                <Link href="#">book now</Link>
+            </section>
+            <section>
+                <Image
+                    src={restaurantImage}
+                    alt="oceanside resturant"
+                    data-source="https://unsplash.com/photos/a-group-of-people-sitting-at-wooden-tables-r9VonMzYwzA"
+                />
+                <h4>Airbnb</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minima vitae voluptas, labore praesentium facere sit non
+                    assumenda sequi mollitia eveniet distinctio hic deleniti
+                    saepe, provident cumque cum laborum iure nobis?
+                </p>
+                <Link href="#">book now</Link>
+            </section>
+            <section>
+                <Image
+                    src={snorkelingImage}
+                    alt="couple snorkeling"
+                    data-source="https://unsplash.com/photos/a-person-in-scuba-gear-under-water-xsTqMVvStMA"
+                />
+                <h4>On the docks</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minima vitae voluptas, labore praesentium facere sit non
+                    assumenda sequi mollitia eveniet distinctio hic deleniti
+                    saepe, provident cumque cum laborum iure nobis?
+                </p>
+                <Link href="#">book now</Link>
+            </section>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .backdrop {
+        filter: brightness(80%) blur(1.5px);
+    }
+
+    main {
+        padding-block: 2rem;
+    }
+
+    .hero {
+        margin-block: 15vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero p {
+        text-align: center;
+    }
+
+    .hero a {
+        margin-top: 1rem;
+    }
+
+    .about-section {
+        padding: 2rem 4rem;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        gap: 2rem;
+    }
+
+    .about-section > h3 {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .about-section section {
+        max-width: 40ch;
+    }
+
+    .about-section h4 {
+        font-size: var(--fs-medium);
+        margin-top: 1rem;
+    }
+
+    .about-section section img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+</style>
