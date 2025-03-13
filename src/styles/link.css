@@ -27,7 +27,10 @@ a:where([data-link-style="underline"]):where(:hover, :focus-visible) {
     outline: transparent;
 }
 
-a:where([data-link-style="underline"]):where(:hover, :focus-visible, [aria-current="page"])::before {
+a:where([data-link-style="underline"]):where(
+        :hover,
+        :focus-visible,
+        [aria-current="page"]
+    )::before {
     transform: scaleX(1);
 }
-

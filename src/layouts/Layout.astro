@@ -1,31 +1,52 @@
 ---
-import '../styles/sanitize.css';
-import '../styles/normalize.css'
-import '../styles/main.css';
-import '../styles/layout.css';
-import '../styles/link.css';
-import Link from '../components/Link.astro';
+import "../styles/sanitize.css";
+import "../styles/normalize.css";
+import "../styles/main.css";
+import "../styles/layout.css";
+import "../styles/link.css";
+import Link from "../components/Link.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Taniti - Home</title>
-        <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
-	</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Taniti - Home</title>
+        <script
+            src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"
+        ></script>
+    </head>
     <body class="content">
         <header id="header" data-content-width="feature">
             <h1><Link href="/d479" class="fs-extra-large">Taniti</Link></h1>
             <nav>
                 <ul>
-                    <li><Link href="/d479" data-link-style="underline">Home</Link></li>
-                    <li><Link href="/d479/link1" data-link-style="underline">Lodging</Link></li>
-                    <li><Link href="/d479/link2" data-link-style="underline">Dining</Link></li>
-                    <li><Link href="/d479/link3" data-link-style="underline">Activities</Link></li>
-                    <li><Link href="/d479/link3" data-link-style="underline">Transportation</Link></li>
+                    <li>
+                        <Link href="/d479" data-link-style="underline"
+                            >Home</Link>
+                    </li>
+                    <li>
+                        <Link href="/d479/link1" data-link-style="underline"
+                            >Lodging</Link
+                        >
+                    </li>
+                    <li>
+                        <Link href="/d479/link2" data-link-style="underline"
+                            >Dining</Link
+                        >
+                    </li>
+                    <li>
+                        <Link href="/d479/link3" data-link-style="underline"
+                            >Activities</Link
+                        >
+                    </li>
+                    <li>
+                        <Link href="/d479/link3" data-link-style="underline"
+                            >Transportation</Link
+                        >
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -37,7 +58,7 @@ import Link from '../components/Link.astro';
                 <li>Contact us</li>
             </ul>
         </footer>
-	</body>
+    </body>
 </html>
 
 <style>
@@ -80,7 +101,7 @@ import Link from '../components/Link.astro';
     footer {
         position: relative;
         padding: 1rem;
-        display:flex;
+        display: flex;
         justify-content: space-between;
         align-items: center;
     }

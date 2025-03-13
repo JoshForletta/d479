@@ -5,9 +5,8 @@ const isCurrent = url.href === Astro.url.href;
 ---
 
 <a
-    aria-current={isCurrent ? 'page' : null}
-    target={isExternal ? '_blank' : null}
-	rel={isExternal ? 'noopener noreferrer' : null}
-	{...Astro.props}
-><slot /></a>
-
+    aria-current={isCurrent ? "page" : null}
+    target={isExternal ? "_blank" : null}
+    rel={isExternal ? "noopener noreferrer" : null}
+    {...Astro.props}><slot /></a
+>

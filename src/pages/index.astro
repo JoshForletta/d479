@@ -1,43 +1,85 @@
 ---
-import '../styles/button.css';
+import "../styles/button.css";
 
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import Layout from '../layouts/Layout.astro';
-import Link from '../components/Link.astro';
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
 
-import backGroundImage from '../assets/beach landscape 1.jpg';
-import lodgingImage from '../assets/beach lodging 1.jpeg';
-import restaurantImage from '../assets/oceanside restaurant 1.jpg';
-import snorkelingImage from '../assets/snorkeling 1.jpg';
+import backGroundImage from "../assets/beach landscape 1.jpg";
+import lodgingImage from "../assets/beach lodging 1.jpeg";
+import restaurantImage from "../assets/oceanside restaurant 1.jpg";
+import snorkelingImage from "../assets/snorkeling 1.jpg";
 ---
 
 <Layout>
-    <Image src={backGroundImage} alt="beach landscape" class="backdrop" data-source="https://unsplash.com/photos/waves-crashing-on-seashore-during-daytime-8iCdRKKoG7g"></Image>
-        <main class="content" data-content-width="full">
+    <Image
+        src={backGroundImage}
+        alt="beach landscape"
+        class="backdrop"
+        data-source="https://unsplash.com/photos/waves-crashing-on-seashore-during-daytime-8iCdRKKoG7g"
+    />
+    <main class="content" data-content-width="full">
         <section class="hero">
             <h2 class="fs-massive">Welcome to Taniti</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolores, eveniet tempora quibusdam doloremque inventore labore odio quod nesciunt amet officia dolor libero distinctio explicabo itaque quas! Totam, alias? Dicta?</p>
-            <Link href="d479/activities" role="button" data-style="accent" data-button-outline>Explore Activities</Link>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                dolores, eveniet tempora quibusdam doloremque inventore labore
+                odio quod nesciunt amet officia dolor libero distinctio
+                explicabo itaque quas! Totam, alias? Dicta?
+            </p>
+            <Link
+                href="d479/activities"
+                role="button"
+                data-style="accent"
+                data-button-outline>Explore Activities</Link
+            >
         </section>
         <div class="about-section light" data-content-width="full">
             <h3 class="fs-large">About the island</h3>
             <section>
-                <Image src={lodgingImage} alt="beachside infinity pool" data-source="https://unsplash.com/photos/brown-wooden-lounge-chairs-on-brown-wooden-dock-during-daytime-xEaAoizNFV8"></Image>
+                <Image
+                    src={lodgingImage}
+                    alt="beachside infinity pool"
+                    data-source="https://unsplash.com/photos/brown-wooden-lounge-chairs-on-brown-wooden-dock-during-daytime-xEaAoizNFV8"
+                />
                 <h4>Lodging</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima vitae voluptas, labore praesentium facere sit non assumenda sequi mollitia eveniet distinctio hic deleniti saepe, provident cumque cum laborum iure nobis?</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minima vitae voluptas, labore praesentium facere sit non
+                    assumenda sequi mollitia eveniet distinctio hic deleniti
+                    saepe, provident cumque cum laborum iure nobis?
+                </p>
                 <Link href="d479/lodging">read more</Link>
             </section>
             <section>
-                <Image src={restaurantImage} alt="oceanside resturant" data-source="https://unsplash.com/photos/a-group-of-people-sitting-at-wooden-tables-r9VonMzYwzA"></Image>
+                <Image
+                    src={restaurantImage}
+                    alt="oceanside resturant"
+                    data-source="https://unsplash.com/photos/a-group-of-people-sitting-at-wooden-tables-r9VonMzYwzA"
+                />
                 <h4>Dining</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima vitae voluptas, labore praesentium facere sit non assumenda sequi mollitia eveniet distinctio hic deleniti saepe, provident cumque cum laborum iure nobis?</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minima vitae voluptas, labore praesentium facere sit non
+                    assumenda sequi mollitia eveniet distinctio hic deleniti
+                    saepe, provident cumque cum laborum iure nobis?
+                </p>
                 <Link href="d479/lodging">read more</Link>
             </section>
             <section>
-                <Image src={snorkelingImage} alt="couple snorkeling" data-source="https://unsplash.com/photos/a-person-in-scuba-gear-under-water-xsTqMVvStMA"></Image>
+                <Image
+                    src={snorkelingImage}
+                    alt="couple snorkeling"
+                    data-source="https://unsplash.com/photos/a-person-in-scuba-gear-under-water-xsTqMVvStMA"
+                />
                 <h4>Activities</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima vitae voluptas, labore praesentium facere sit non assumenda sequi mollitia eveniet distinctio hic deleniti saepe, provident cumque cum laborum iure nobis?</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minima vitae voluptas, labore praesentium facere sit non
+                    assumenda sequi mollitia eveniet distinctio hic deleniti
+                    saepe, provident cumque cum laborum iure nobis?
+                </p>
                 <Link href="d479/lodging">read more</Link>
             </section>
         </div>
