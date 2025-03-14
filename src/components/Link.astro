@@ -1,7 +1,7 @@
 ---
 const url = new URL(Astro.props.href, Astro.url);
 const isExternal = url.host !== Astro.url.host;
-const isCurrent = Astro.url.href.endsWith(url.href);
+const isCurrent = url.pathname === Astro.url.pathname;
 ---
 
 <a
