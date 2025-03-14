@@ -1,7 +1,5 @@
 ---
 const url = new URL(Astro.props.href, Astro.url);
-console.log(url, url);
-
 const isExternal = url.host !== Astro.url.host;
 const isCurrent = url.href === Astro.url.href;
 ---

@@ -5,4 +5,5 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
     site: "https://JoshForletta.github.io",
     base: "d479",
+    trailingSlash: "always",
 });
