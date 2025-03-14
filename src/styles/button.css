@@ -14,4 +14,5 @@
 *[role="button"]:where([data-button-outline]):where(:hover, :focus-visible) {
     /*opacity: 85%;*/
     backdrop-filter: brightness(115%) blur(5px);
+    -webkit-backdrop-filter: brightness(115%) blur(5px);
 }
